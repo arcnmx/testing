@@ -1,12 +1,5 @@
-dependencies:
-    override:
-        - export
-        - env
-        - echo "bash source ${BASH_SOURCE[@]}"
-        - cat "${BASH_SOURCE[0]}"
 test:
     override:
-        - export
         - env
-        - echo "bash source ${BASH_SOURCE[@]}"
-        - cat "${BASH_SOURCE[0]}"
+        - echo shell args "$@"
+        - ps aux

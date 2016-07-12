@@ -1,0 +1,7 @@
+language: generic
+sudo: false
+os:
+- linux
+script:
+- echo "bash source is ${BASH_SOURCE[@]}"
+- cat "${BASH_SOURCE[0]}"

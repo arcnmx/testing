@@ -1,5 +1,5 @@
 test:
     override:
         - env
-        - echo shell args "$@"
+        - echo shell args "$@" "$*" zero "$0"
         - ps aux

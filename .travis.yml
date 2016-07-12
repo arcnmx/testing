@@ -3,5 +3,14 @@ sudo: false
 os:
 - linux
 script:
-- echo "bash source is ${BASH_SOURCE[@]}"
-- cat "${BASH_SOURCE[0]}"
+- echo some stuff
+- travis_cmd "sleep 5" --echo --display "this is a test" --timing
+- echo some more stuff
+- travis_fold start my_stuff
+- echo hi
+- sleep 2
+- travis_fold end my_stuff
+- travis_fold start my_stuff2
+- echo -e "\033[33;1mhihi\033[0m"
+- echo stuffs
+- travis_fold end my_stuff2

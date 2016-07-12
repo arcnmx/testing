@@ -2,4 +2,4 @@ test:
     override:
         - env
         - echo shell args "$@" "$*" zero "$0"
-        - ps aux
+        - env COLUMNS=500 ps aux
